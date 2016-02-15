@@ -1,3 +1,13 @@
+Talaka.by extension notes
+=========================
+
+Deploy to appengine
+    appcfg.py -A schema-talaka-by update .
+    
+Base url for extension:
+    http://tal.schema.talaka.by/docs/full.html
+
+
 Welcome to Schema.org
 =====================
 

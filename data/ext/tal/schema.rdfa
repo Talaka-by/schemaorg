@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:schema="http://schema.org/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en" lang="en">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Talaka.by</title>
+<style type="text/css">
+      span.h {
+        padding-left: 0px;
+        font-weight: bold;
+      }
+      span {
+        display: block;
+        padding-left: 10px;
+      }
+    </style>
+</head>
+<body>
+<h1>Talaka.by Schema.org Extension</h1>
+
+<p>This is an RDFa representation of the tal.schema.talaka.by extension for talaka.by subject scope.</p>
+
+<p vocab="http://schema.org/" prefix="tal: http://schema.talaka.by/" >Default vocabulary prefix: 'tal:'</p>
+<p>
+<span property="schema:softwareVersion">tal extension - version 0.1</span>
+</p>
+<hr/>
+<h2>Types</h2>
+
+<div typeof="rdfs:Class" resource="http://schema.org/Project">
+    <link property="http://schema.org/isPartOf" href="http://tal.schema.org"/>
+    <span class="h" property="rdfs:label">Project</span>
+
+    <span xml:lang="en" property="rdfs:comment">Project on Talaka.by. Base entity.
+It's a temporary organization for solving an problem</span>
+    
+    <span xml:lang="ru" property="rdfs:comment">Проект на Talaka.by. Базовая сущность.
+Представляет собой временную организацию, созданную для решения проблемы.</span>
+
+        <span>
+            <a property="rdfs:subClassOf" href="http://schema.org/Organization">Organization</a>
+        </span>
+</div>
+
+<div typeof="rdfs:Class" resource="http://schema.org/Task">
+    <link property="http://schema.org/isPartOf" href="http://tal.schema.org" />
+    <span class="h" property="rdfs:label">Task</span>
+    <span property="rdfs:comment">Задача для выполнения в рамках проекта на Talaka.by</span>
+        <span>
+        <a property="rdfs:subClassOf" href="http://schema.org/Organization">Thing</a></span>
+</div>
+
+
+<div typeof="rdf:Property" resource="http://schema.org/task">
+    <link property="http://schema.org/isPartOf" href="http://tal.schema.org" />
+    <span class="h" property="rdfs:label">task</span>
+    <span property="rdfs:comment">Project tasks</span>
+    <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Project">Project</a></span>
+    <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Task">Task</a></span>
+</div>
+
+
+</body>
+</html>
