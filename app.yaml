@@ -1,6 +1,6 @@
 #application: schemaorgae
 #application: webschemas
-application: sdo-deimos
+application: schema-talaka-by
 
 version: 1
 runtime: python27
