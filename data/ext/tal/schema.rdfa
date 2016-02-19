@@ -31,24 +31,48 @@
     <link property="http://schema.org/isPartOf" href="http://tal.schema.org"/>
     <span class="h" property="rdfs:label">Project</span>
 
-    <span xml:lang="en" property="rdfs:comment">Project on Talaka.by. Base entity.
-It's a temporary organization for solving an problem</span>
-    
-    <span xml:lang="ru" property="rdfs:comment">Проект на Talaka.by. Базовая сущность.
-Представляет собой временную организацию, созданную для решения проблемы.</span>
+    <span xml:lang="en" property="rdfs:comment">A project. It's a temporary organization for solving an problem</span>
 
-        <span>
-            <a property="rdfs:subClassOf" href="http://schema.org/Organization">Organization</a>
-        </span>
+    <span>
+        <a property="rdfs:subClassOf" href="http://schema.org/Organization">Organization</a>
+    </span>
 </div>
 
 <div typeof="rdfs:Class" resource="http://schema.org/Task">
     <link property="http://schema.org/isPartOf" href="http://tal.schema.org" />
     <span class="h" property="rdfs:label">Task</span>
-    <span property="rdfs:comment">Задача для выполнения в рамках проекта на Talaka.by</span>
-        <span>
-        <a property="rdfs:subClassOf" href="http://schema.org/Organization">Thing</a></span>
+    <span property="rdfs:comment">task to solve a problem within a specific project or not</span>
+    <span>
+        <a property="rdfs:subClassOf" href="http://schema.org/CreativeWork">CreativeWork</a>
+    </span>
 </div>
+
+
+<div typeof="rdfs:Class" resource="http://schema.org/Idea">
+    <link property="http://schema.org/isPartOf" href="http://tal.schema.org"/>
+    <span class="h" property="rdfs:label">Project</span>
+
+    <span xml:lang="en" property="rdfs:comment">A specific idea about something -
+        e.g. for site which collected user ideas about improvement social processes and other</span>
+    <span>
+        <a property="rdfs:subClassOf" href="http://schema.org/CreativeWork">CreativeWork</a>
+    </span>
+</div>
+
+
+<div typeof="rdfs:Class" resource="http://schema.org/SocialSectorCategory">
+    <link property="http://schema.org/isPartOf" href="http://tal.schema.org" />
+    <span class="h" property="rdfs:label">SocialSectorCategory</span>
+    <span property="rdfs:comment">The enumeration of the social sphere</span>
+    <span>
+        <a property="rdfs:subClassOf" href="http://schema.org/Intangible">Intangible</a>
+    </span>
+</div>
+
+
+
+<h2>Properties</h2>
+
 
 
 <div typeof="rdf:Property" resource="http://schema.org/task">
@@ -58,6 +82,87 @@ It's a temporary organization for solving an problem</span>
     <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Project">Project</a></span>
     <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Task">Task</a></span>
 </div>
+
+
+<div typeof="rdf:Property" resource="http://schema.org/idea">
+    <link property="http://schema.org/isPartOf" href="http://tal.schema.org" />
+    <span class="h" property="rdfs:label">idea</span>
+    <span property="rdfs:comment">General idea of a project</span>
+    <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Project">Project</a></span>
+    <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Idea">Idea</a></span>
+</div>
+
+
+<div typeof="rdf:Property" resource="http://schema.org/problem">
+    <link property="http://schema.org/isPartOf" href="http://tal.schema.org" />
+    <span class="h" property="rdfs:label">problem</span>
+    <span property="rdfs:comment">Problem which should be solved</span>
+    <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Project">Project</a></span>
+    <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Idea">Idea</a></span>
+    <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/CreativeWork">CreativeWork</a></span>
+    <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
+</div>
+
+
+<div typeof="rdf:Property" resource="http://schema.org/headline">
+    <link property="http://schema.org/isPartOf" href="http://tal.schema.org" />
+    <span class="h" property="rdfs:label">headline</span>
+    <span property="rdfs:comment">Short Idea description</span>
+    <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Idea">Idea</a></span>
+    <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/solution">
+    <link property="http://schema.org/isPartOf" href="http://tal.schema.org" />
+    <span class="h" property="rdfs:label">about</span>
+    <span property="rdfs:comment">What you propose to solve a problem</span>
+    <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Idea">Idea</a></span>
+    <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Project">Project</a></span>
+    <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
+    <span>
+        <a property="rdfs:subPropertyOf" href="http://schema.org/about">about</a>
+    </span>
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/mainEntityOfPage">
+    <link property="http://schema.org/isPartOf" href="http://tal.schema.org" />
+    <span class="h" property="rdfs:label">mainEntityOfPage</span>
+    <span property="rdfs:comment">Project description</span>
+    <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Project">Project</a></span>
+    <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/CreativeWork">CreativeWork</a></span>
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/requirement">
+    <link property="http://schema.org/isPartOf" href="http://tal.schema.org" />
+    <span class="h" property="rdfs:label">requirement</span>
+    <span property="rdfs:comment">What you need to solve a problem</span>
+    <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Idea">Idea</a></span>
+    <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Thing">Thing</a></span>
+</div>
+
+
+<div typeof="rdf:Property" resource="http://schema.org/areaServed">
+    <link property="http://schema.org/isPartOf" href="http://tal.schema.org" />
+    <span class="h" property="rdfs:label">requiremenent</span>
+    <span property="rdfs:comment">The geographic area to whichis this idea.</span>
+    <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Idea">Idea</a></span>
+    <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Place">Thing</a></span>
+</div>
+
+
+
+
+<div typeof="rdf:Property" resource="http://schema.org/category">
+    <link property="http://schema.org/isPartOf" href="http://tal.schema.org" />
+    <span class="h" property="rdfs:label">category</span>
+    <span property="rdfs:comment">Category of the social sphere</span>
+    <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Idea">Idea</a></span>
+    <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Project">Project</a></span>
+    <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/SocialSectorEnumeration">SocialSectorEnumeration</a></span>
+</div>
+
+
+
 
 
 </body>
