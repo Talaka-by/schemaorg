@@ -100,6 +100,14 @@
     <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Idea">Idea</a></span>
 </div>
 
+<div typeof="rdf:Property" resource="http://schema.org/slug">
+    <link property="http://schema.org/isPartOf" href="http://tal.schema.org" />
+    <span class="h" property="rdfs:label">slug</span>
+    <span property="rdfs:comment">The url slug parameter</span>
+    <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Project">Project</a></span>
+    <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Idea">Idea</a></span>
+    <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Number">Number</a></span>
+</div>
 
 <div typeof="rdf:Property" resource="http://schema.org/problem">
     <link property="http://schema.org/isPartOf" href="http://tal.schema.org" />
