@@ -78,6 +78,14 @@
     </span>
 </div>
 
+<div typeof="rdfs:Class" resource="http://schema.org/IdeaUser">
+    <link property="http://schema.org/isPartOf" href="http://tal.schema.org" />
+    <span class="h" property="rdfs:label">IdeaUser</span>
+    <span property="rdfs:comment">Idea user.</span>
+    <span>
+        <a property="rdfs:subClassOf" href="http://schema.org/Member">Member</a>
+    </span>
+</div>
 
 <h2>Properties</h2>
 
