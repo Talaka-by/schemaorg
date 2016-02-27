@@ -78,15 +78,6 @@
     </span>
 </div>
 
-<div typeof="rdfs:Class" resource="http://schema.org/IdeaMember">
-    <link property="http://schema.org/isPartOf" href="http://tal.schema.org/">
-    <span class="h" property="rdfs:label">IdeaMember</span>
-    <span property="rdfs:comment">Idea member</span>
-    <span>
-        <a property="rdfs:subClassOf" href="http://schema.org/ProgramMembership">ProgramMembership</a>
-    </span>
-</div>
-
 <h2>Properties</h2>
 
 
@@ -173,9 +164,6 @@
     <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Place">Thing</a></span>
 </div>
 
-
-
-
 <div typeof="rdf:Property" resource="http://schema.org/category">
     <link property="http://schema.org/isPartOf" href="http://tal.schema.org" />
     <span class="h" property="rdfs:label">category</span>
@@ -185,8 +173,14 @@
     <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/SocialSectorCategory">SocialSectorCategory</a></span>
 </div>
 
-
-
+<div typeof="rdf:Property" resource="http://schema.org/memeber">
+    <link property="http://schema.org/isPartOf" href="http://tal.schema.org" />
+    <span class="h" property="rdfs:label">memeber</span>
+    <span property="rdfs:comment">Member</span>
+    <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Project">Project</a></span>
+    <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Idea">Idea</a></span>
+    <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
+</div>
 
 
 </body>
