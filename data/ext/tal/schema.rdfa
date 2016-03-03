@@ -40,8 +40,98 @@
 
 <div typeof="rdfs:Class" resource="http://schema.org/ProjectTask">
     <link property="http://schema.org/isPartOf" href="http://tal.schema.org" />
-    <span class="h" property="rdfs:label">Task</span>
+    <span class="h" property="rdfs:label">ProjectTask</span>
     <span property="rdfs:comment">task to solve a problem within a specific project</span>
+    <span>
+        <a property="rdfs:subClassOf" href="http://schema.org/CreativeWork">CreativeWork</a>
+    </span>
+</div>
+
+<div typeof="rdfs:Class" resource="http://schema.org/ProjectPayment">
+    <link property="http://schema.org/isPartOf" href="http://tal.schema.org" />
+    <span class="h" property="rdfs:label">ProjectPayment</span>
+    <span property="rdfs:comment">payments</span>
+    <span>
+        <a property="rdfs:subClassOf" href="http://schema.org/CreativeWork">CreativeWork</a>
+    </span>
+</div>
+
+<div typeof="rdfs:Class" resource="http://schema.org/ProjectPromis">
+    <link property="http://schema.org/isPartOf" href="http://tal.schema.org" />
+    <span class="h" property="rdfs:label">ProjectPromis</span>
+    <span property="rdfs:comment">members, who gave a promise</span>
+    <span>
+        <a property="rdfs:subClassOf" href="http://schema.org/CreativeWork">CreativeWork</a>
+    </span>
+</div>
+
+<div typeof="rdfs:Class" resource="http://schema.org/ProjectTeamMember">
+    <link property="http://schema.org/isPartOf" href="http://tal.schema.org" />
+    <span class="h" property="rdfs:label">ProjectTeamMember</span>
+    <span property="rdfs:comment">the project team members</span>
+    <span>
+        <a property="rdfs:subClassOf" href="http://schema.org/CreativeWork">CreativeWork</a>
+    </span>
+</div>
+
+<div typeof="rdfs:Class" resource="http://schema.org/ProjectImportant">
+    <link property="http://schema.org/isPartOf" href="http://tal.schema.org" />
+    <span class="h" property="rdfs:label">ProjectImportant</span>
+    <span property="rdfs:comment">members, who considers that project is important</span>
+    <span>
+        <a property="rdfs:subClassOf" href="http://schema.org/CreativeWork">CreativeWork</a>
+    </span>
+</div>
+
+<div typeof="rdfs:Class" resource="http://schema.org/ProjectSubscriber">
+    <link property="http://schema.org/isPartOf" href="http://tal.schema.org" />
+    <span class="h" property="rdfs:label">ProjectSubscriber</span>
+    <span property="rdfs:comment">subscribers for that project </span>
+    <span>
+        <a property="rdfs:subClassOf" href="http://schema.org/CreativeWork">CreativeWork</a>
+    </span>
+</div>
+
+<div typeof="rdfs:Class" resource="http://schema.org/ProjectSubscriber">
+    <link property="http://schema.org/isPartOf" href="http://tal.schema.org" />
+    <span class="h" property="rdfs:label">ProjectSubscriber</span>
+    <span property="rdfs:comment">subscribers for that project </span>
+    <span>
+        <a property="rdfs:subClassOf" href="http://schema.org/CreativeWork">CreativeWork</a>
+    </span>
+</div>
+
+<div typeof="rdfs:Class" resource="http://schema.org/ProjectBlogPost">
+    <link property="http://schema.org/isPartOf" href="http://tal.schema.org" />
+    <span class="h" property="rdfs:label">ProjectBlogPost</span>
+    <span property="rdfs:comment">project blog post</span>
+    <span>
+        <a property="rdfs:subClassOf" href="http://schema.org/CreativeWork">CreativeWork</a>
+    </span>
+</div>
+
+<div typeof="rdfs:Class" resource="http://schema.org/ProjectBlogComment">
+    <link property="http://schema.org/isPartOf" href="http://tal.schema.org" />
+    <span class="h" property="rdfs:label">ProjectBlogComment</span>
+    <span property="rdfs:comment">project blog comment</span>
+    <span>
+        <a property="rdfs:subClassOf" href="http://schema.org/CreativeWork">CreativeWork</a>
+    </span>
+</div>
+
+<div typeof="rdfs:Class" resource="http://schema.org/ProjectForumThread">
+    <link property="http://schema.org/isPartOf" href="http://tal.schema.org" />
+    <span class="h" property="rdfs:label">ProjectForumThread</span>
+    <span property="rdfs:comment">project forum thread</span>
+    <span>
+        <a property="rdfs:subClassOf" href="http://schema.org/CreativeWork">CreativeWork</a>
+    </span>
+</div>
+
+<div typeof="rdfs:Class" resource="http://schema.org/ProjectForumTopic">
+    <link property="http://schema.org/isPartOf" href="http://tal.schema.org" />
+    <span class="h" property="rdfs:label">ProjectForumTopic</span>
+    <span property="rdfs:comment">project forum topic</span>
     <span>
         <a property="rdfs:subClassOf" href="http://schema.org/CreativeWork">CreativeWork</a>
     </span>
@@ -173,13 +263,22 @@
     <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/SocialSectorCategory">SocialSectorCategory</a></span>
 </div>
 
-<div typeof="rdf:Property" resource="http://schema.org/memeber">
+<div typeof="rdf:Property" resource="http://schema.org/member">
     <link property="http://schema.org/isPartOf" href="http://tal.schema.org" />
     <span class="h" property="rdfs:label">memeber</span>
     <span property="rdfs:comment">Member</span>
     <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Project">Project</a></span>
     <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Idea">Idea</a></span>
-    <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
+    <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/ProjectPayment">ProjectPayment</a></span>
+    <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/ProjectPromis">ProjectPromis</a></span>
+    <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/ProjectTeamMember">ProjectTeamMember</a></span>
+    <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/ProjectImportant">ProjectImportant</a></span>
+    <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/ProjectSubscriber">ProjectSubscriber</a></span>
+    <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/ProjectBlogPost">ProjectBlogPost</a></span>
+    <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/ProjectBlogComment">ProjectBlogComment</a></span>
+    <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/ProjectForumTopic">ProjectForumTopic</a></span>
+    <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/ProjectForumThread">ProjectForumThread</a></span>
+    <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Url">Url</a></span>
 </div>
 
 
