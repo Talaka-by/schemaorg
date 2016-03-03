@@ -38,15 +38,14 @@
     </span>
 </div>
 
-<div typeof="rdfs:Class" resource="http://schema.org/Task">
+<div typeof="rdfs:Class" resource="http://schema.org/ProjectTask">
     <link property="http://schema.org/isPartOf" href="http://tal.schema.org" />
     <span class="h" property="rdfs:label">Task</span>
-    <span property="rdfs:comment">task to solve a problem within a specific project or not</span>
+    <span property="rdfs:comment">task to solve a problem within a specific project</span>
     <span>
         <a property="rdfs:subClassOf" href="http://schema.org/CreativeWork">CreativeWork</a>
     </span>
 </div>
-
 
 <div typeof="rdfs:Class" resource="http://schema.org/Idea">
     <link property="http://schema.org/isPartOf" href="http://tal.schema.org"/>
@@ -87,7 +86,7 @@
     <span class="h" property="rdfs:label">task</span>
     <span property="rdfs:comment">Project tasks</span>
     <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Project">Project</a></span>
-    <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Task">Task</a></span>
+    <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/ProjectTask">ProjectTask</a></span>
 </div>
 
 
